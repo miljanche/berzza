@@ -1,0 +1,765 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Finance</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/custom.css" rel="stylesheet" media="screen">
+</head>
+<body>
+ <header>
+   <h2>Find patterns!</h2>
+ </header>
+ <form class=".form-horizontal" method="post" action="/result">
+ <div class="col-md-12" id="wrapper">
+  <div class="col-md-7">
+   
+      <div id="empty"></div>
+<!--
+      <div class="form-inline form-group">
+        <div class="col-md-2 col-md-offset-2 part-option">
+          <label class="control-label">Start day: </label>
+        </div>
+        <div>
+          <label for="startDay" class="sr-only">Day</label>
+          <select class="form-control" id="startDay" name="startDay">
+          </select>
+          <label for="startMonth" class="sr-only">Month</label>
+          <select class="form-control" id="startMonth" name="startMonth">
+          </select>
+          <label for="startYear" class="sr-only">Year</label>
+          <select class="form-control" id="startYear" name="startYear">
+          </select>
+        </div>
+      </div>
+      <div class="form-inline form-group">
+        <div class="col-md-2 col-md-offset-2 part-option">
+          <label class="control-label">End day: </label>
+        </div>
+        <div>
+          <label for="endDay" class="sr-only">Day</label>
+          <select class="form-control" id="endDay" name="endDay">
+          </select>
+          <label for="endMonth" class="sr-only">Month</label>
+          <select class="form-control" id="endMonth" name="endMonth">
+          </select>
+          <label for="endYear" class="sr-only">Year</label>
+          <select class="form-control" id="endYear" name="endYear">
+          </select>
+        </div>
+      </div>
+      <div class="form-inline form-group">
+        <div class="col-md-2 col-md-offset-2 part-option">
+           <label class="control-label">Interval: </label>
+        </div>
+        <div>
+         <select class="form-control" name="interval">
+          <option>d</option>
+          <option>w</option>
+          <option>m</option>
+        </select>
+      </div>
+    </div>
+
+  -->
+
+  <div class="form-group form-inline">
+      <label for="inputPassword" class="col-md-4 control-label">Start date: </label>
+      <div class="col-md-6">
+        <label for="startDay" class="sr-only">Day</label>
+          <select class="form-control" id="startDay" name="startDay">
+          </select>
+          <label for="startMonth" class="sr-only">Month</label>
+          <select class="form-control" id="startMonth" name="startMonth">
+          </select>
+          <label for="startYear" class="sr-only">Year</label>
+          <select class="form-control" id="startYear" name="startYear">
+          </select>
+      </div>
+    </div>
+
+     <div class="form-group form-inline">
+      <label for="inputPassword" class="col-md-4 control-label">End date: </label>
+      <div class="col-md-6">
+         <label for="endDay" class="sr-only">Day</label>
+          <select class="form-control" id="endDay" name="endDay">
+          </select>
+          <label for="endMonth" class="sr-only">Month</label>
+          <select class="form-control" id="endMonth" name="endMonth">
+          </select>
+          <label for="endYear" class="sr-only">Year</label>
+          <select class="form-control" id="endYear" name="endYear">
+          </select>
+      </div>
+    </div>
+
+
+  <div class="form-group">
+      <label for="inputPassword" class="col-md-4 control-label">Interval: </label>
+      <div class="col-md-2">
+         <select class="form-control" name="interval">
+          <option>d</option>
+          <option>w</option>
+          <option>m</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="features" class="col-md-4 control-label">Number of features: </label>
+      <div class="col-md-2">
+        <input type="text" class="form-control" id="features" name="features" value="4">
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+
+
+<div class="col-md-11" id="companies-container">
+  <h4 id="companies">Companies</h4>
+  <div class="row">
+    <div class="col-md-2">
+      <h5>Oil & Gas</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="RDS" name="RDS"> Royal Dutch Shell
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="XOM" name="XOM"> Exxon Mobil Corporation
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SNP" name="SNP"> China Petroleum & Chemical Corporation
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SHI" name="SHI"> Sinopec Shanghai Petrochemical Company Limited
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="BP" name="BP"> British Petroleum
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="TOT" name="TOT"> TOTAL S. A.
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="CVX" name="CVX"> Chevron Corporation
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="E" name="E"> Eni
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="PBR" name="PBR">  Petrobras- Petroleo Brasileiro S.A.
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="VLO" name="VLO">Valero Energy
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="STO" name="STO"> Statoil
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-md-2">
+       <h5>IT & electronics hardware</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="AAPL" name="AAPL"> Apple
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="LPL" name="LPL"> LG
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="T" name="T"> AT&T
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="HPQ" name="HPQ"> Hewlett-Packard
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="IBM" name="IBM"> IBM
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="NOK" name="NOK"> Nokia
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="CAJ" name="CAJ"> Canon
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="MSI" name="MSI"> Motorola Solutions
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SNE" name="SNE">  Sony
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="PHG" name="PHG">Philips 
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="INTC" name="INTC"> Intel
+               </label>
+              </div>
+          </li>
+            <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="AMD" name="AMD"> AMD
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="col-md-2">
+       <h5>Software and internet</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="MSFT" name="MSFT"> Microsoft
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="ORCL" name="ORCL"> Oracle
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SAP" name="SAP"> SAP SE
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SYMC" name="SYMC"> Symantec
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="VMW" name="VMW"> VMware
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="ADBE" name="ADBE"> Adobe Systems
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="FISV" name="FISV"> Fiserv
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="INTU" name="INTU"> Intuit
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="CSCO" name="CSCO">  Cisco Systems
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="GOOGL" name="GOOGL">Google 
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="ERIC" name="ERIC"> Ericsson
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="ADSK" name="ADSK"> Autodesk
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="RHT" name="RHT"> Red Hat
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="AMZN" name="AMZN"> Amazon.com
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="NFLX" name="NFLX"> Netflix
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="BIDU" name="BIDU"> Baidu
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+   <div class="col-md-2">
+       <h5>Automotive</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="VOW.F" name="VOW.F"> Volkswagen Group
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="TM" name="TM"> Toyota Motor Corporation
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="GM" name="GM"> General Motors
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="F" name="F"> Ford Motor Company
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="NSANY" name="NSANY"> Nissan Motor Corporation
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="HMC" name="HMC"> Honda Motor Company
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+   <div class="col-md-2">
+       <h5>Food</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="PEP" name="PEP"> PepsiCo Inc.
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="TSN" name="TSN"> Tyson Foods Inc.
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="BUD" name="BUD"> Anheuser-Busch InBev
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="KO" name="KO"> Coca-Cola
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="DPS" name="DPS"> Dr. Pepper Snapple Group
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="MCD" name="MCD"> McDonald's Corporation
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+   <div class="col-md-2">
+       <h5>Banks & Finance</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="HSBC" name="HSBC"> HSBC Holdings
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="MTU" name="MTU"> Mitsubishi UFJ Financial Group
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="JPM" name="JPM"> JPMorgan Chase & Co
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="BCS" name="BCS"> Barclays PLC
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="DB" name="DB"> Deutche Bank AG
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="C" name="C"> Citigroup INC
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="MFG" name="MFG"> Mizuho Financial Group
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="RBS" name="RBS"> Royal Bank of Scotland Group
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SAN" name="SAN">  Banco Santander
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="SMFG" name="SMFG">Sumitomo Mitsui Financial Group 
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="WFC" name="WFC"> Wells Fargo & Co
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="BAC" name="BAC"> Bank of America
+               </label>
+              </div>
+          </li>
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="LYG" name="LYG"> Lloyds Banking Group
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+   <div class="col-md-2">
+       <h5>Other</h5>
+      <ul class="list-unstyled">
+          <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="NKE" name="NKE"> Nike
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="DIS" name="DIS"> The Walt Disney Company
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="WMT" name="WMT"> Wal-Mart Stores
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="PG" name="PG"> The Procter & Gamble
+               </label>
+              </div>
+          </li>
+           <li>
+             <div class="checkbox">
+               <label>
+                 <input type="checkbox" id="inlineCheckbox1" value="JNJ" name="JNJ"> Johnson & Johnson
+               </label>
+              </div>
+          </li>
+        </ul>
+    </div>
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+
+<div class="col-md-12" id="submit-wrap">
+  <input type="submit" class="btn btn-primary" value="Find patern!">
+</div>
+
+</div>
+</form>
+
+
+</body>
+</html>

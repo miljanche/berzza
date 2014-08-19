@@ -1,0 +1,78 @@
+body, body .div{
+	background-color: #CCCC99;
+}
+
+#choose p{
+	float: right;
+	position:relative;
+	height: 10px; margin: 8px 0;
+
+}CADFE3
+#choose .col-md-2{
+	
+	display: block; height: 20px;
+}
+
+h4#companies{
+	width: 50%;
+	margin: 30px auto;
+	float:none;
+	text-align:center;
+}
+#companies-container .col-md-6{
+	width: 90%;
+	margin: 0px auto;
+	float:none;
+}
+.part-option{
+	margin-top: 0px;
+}
+#wrapper{
+	
+}
+
+#wrapper .col-md-7{
+	
+	/*height: 300px;*/
+	width: 50%;
+	margin: 0 auto;
+	float:none;
+}
+#empty{
+	height: 20px;
+}
+#submit-wrap{
+	height: 50px;
+	width: 100%;
+	margin: 30px auto;
+	float:block;
+	text-align:center;"
+}
+.form-control{
+	background-color: #6699CC;
+	color: #E6E6CC;
+	border-color: #6699CC;
+	margin: 0 10px;
+}
+
+.part-option label{
+	float: right;
+}
+header h2{
+	width: 50%;
+	margin: 20px auto;
+	float:none;
+	text-align: center;
+}
+
+#companies-container .col-md-2 {
+	height: 500px;
+	border-left-style: solid;
+	border-left-width: 3px;
+	border-color: #444;
+	margin-bottom: 30px;
+}
+
+#companies-container h5{
+	font-size: 20px;
+}
