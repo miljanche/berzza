@@ -1,13 +1,5 @@
-# Berza
+<<<<<<< HEAD
 
-A Clojure library designed to ... well, that part is up to you.
 
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2014 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Finding patterns using Non-Negative Matrix Factorization
+>>>>>>> 2f5f89c20292edab2eae312dfd5c13e9ffb64db6
