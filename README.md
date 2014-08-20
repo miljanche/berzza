@@ -22,9 +22,9 @@ Generally, this problem is not solvable directly, so numerical methods are used.
 
 This method updates W and H matrix in each iteration by algorithm shown on Picture 1. Matrix *V* is extracted from data and doesn't change during algorithm. Matrices *W* and *H* are, at beginning, filled with random numbers in interval (0,1]. Dimensions of matrices are:
 
-* Matrix *V* is extracted from data, dimensons [d,c] (d -number of rows, c - number of columns)
-* Matrix *W* has dimensons [d,f] (f - number of features)
-* Matrix *H* has dimensons [f,c] (f - number of features)
+* Matrix *V* is extracted from data, dimensons <d,c> (d - number of rows, c - number of columns)
+* Matrix *W* has dimensons <d,f> (f - number of features)
+* Matrix *H* has dimensons <f,c> (f - number of features)
  
 Algorithm stops if **V = W x H**, or after some other condition (multiplied W and H are enough close to V, or after some number of iterations, etc).
 
