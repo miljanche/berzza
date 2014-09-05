@@ -3,7 +3,7 @@ berzza
 
 # 1. Requirements
 
-The idea behind this project is to provide functonality of factorizing stock data and finding patterns in them. Data is collected from [YAHOO! Finance API](http://finance.yahoo.com). This api provides stock trade data for every company (that trades on NYSE - New York Stock Exchange), for a each trade day. Property used for calculations is Volume of traded stocks for day.
+The idea behind this project is to provide functonality of factorizing stock data and finding patterns in them.
 
 
 Program workflow consists of several phases:
@@ -16,22 +16,13 @@ Program workflow consists of several phases:
  
 # 2. **NMF** - Non-negative matrix factorization
 
-NMF is method introduced in early 90s. It is method where start matrix (V) is factorized in (usually) two matrices, W and H. All three matrices have non-negative elements. Matrix multiplication of W and H should be equal to V. -> **V ≈ W x H**
+NMF is method for factorizing start matrix (V) in (usually) two matrices, W and H. All three matrices have non-negative elements. Matrix multiplication of W and H should be equal to V. -> **V ≈ W x H**
 
-Generally, this problem is not solvable directly, so numerical methods are used. In this project, we used simple *Multiplicative update method*. Other methods for solving nmf are *Alternating Non-negative Least Squares* and several *Gradient methods*.
-
-This method updates W and H matrix in each iteration by algorithm shown on Picture 1. Matrix *V* is extracted from data and doesn't change during algorithm. Matrices *W* and *H* are, at beginning, filled with random numbers in interval (0,1]. Dimensions of matrices are:
-
-* Matrix *V* is extracted from data, dimensons d,c (d - number of rows, c - number of columns)
-* Matrix *W* has dimensons d,f (f - number of features)
-* Matrix *H* has dimensons f,c (f - number of features)
- 
-Algorithm stops if **V = W x H**, or after some other condition (multiplied W and H are enough close to V, or after some number of iterations, etc).
-
-![Picture 1 - Multiplicative update method - algorithm](docs/images/nmf.png)
-Picture 1 - Multiplicative update method - algorithm
+Algorithm is iterative and stops when WxH is equal to V or after some stopping criteria (ex. difference is small enough). Result of algorithm are matrices W and H.
 
 More information in [1].
+
+Solution: Data is collected from [YAHOO! Finance API](http://finance.yahoo.com). This api provides stock trade data for every company (that trades on NYSE - New York Stock Exchange), for a each trade day. Property used for calculations in this project is Volume of traded stocks for day.
 
 # 3. Techical realisation
 
@@ -44,6 +35,11 @@ The application is written in [Clojure](http://clojure.org/). Clojure is functio
 [Compojure](https://github.com/weavejester/compojure) is small routing library for Ring.
 
 [Hiccup](https://github.com/weavejester/hiccup) is library for HTML templating, via Clojure-like syntax.
+
+**Project structure**
+
+![Picture 2 - Structure](docs/images/structure.png)
+Picture 2 - Structure
 
 ###Visualization:
 
