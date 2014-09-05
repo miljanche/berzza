@@ -77,7 +77,7 @@
              "var companiesValues = [" companiesV "];"
              "var datesNames = ['" (putDQuotes dates) "'];"
              "var datesValues = [" datesV "];"
-             "createHeading(" numRes ");"
+             "createHeading(" (+ numRes 1) ");"
              "createSVG(companiesValues, companiesNames,datesValues,datesNames,returnColorset(" numRes ")," numRes");"))
       )
     ))
@@ -94,7 +94,9 @@
 ; (prn (html(parse-vis "resources/views/vis.html")))
   (html 
     (parse-vis "resources/views/vis.html")
-        
+        [:h2 "How to interpret results?"]
+        [:img {:src "img/explanation.png"}]
+        [:h1 "Results:"]
         [:script {:type "text/javascript"} 
          (apply str
                (makeScript nmfed)

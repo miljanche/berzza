@@ -298,7 +298,7 @@ svg0.append("text")
   })
   .attr("height", horBarHeight - barPadding)
   .attr("fill", function(d) {
-    return createColorSet(dateVals, colorSet, d);
+    return createColorSet(dateVals, [0,200,0,200,0,200], d);
   });
 
   svg2.selectAll("text")
@@ -543,7 +543,7 @@ function createHeading(index){
   svgH.append("text")
       .attr("x", width/2)
       .attr("y", 55)
-      .text("Feature")
+      .text("Characteristic")
       .attr("text-anchor", "middle")
       .attr("font-family", "Helvetica")
       .attr("font-size", "38px")
