@@ -31,7 +31,7 @@ Algorithm stops if **V = W x H**, or after some other condition (multiplied W an
 ![Picture 1 - Multiplicative update method - algorithm](docs/images/nmf.png)
 Picture 1 - Multiplicative update method - algorithm
 
-More information [here](http://www.csie.ntu.edu.tw/~cjlin/papers/pgradnmf.pdf).
+More information in [1].
 
 # 3. Techical realisation
 
@@ -120,3 +120,7 @@ General Motors launched largest U.S. Initial public offering of 2010 on NYSE (an
 
 # 5. Acknowledgements
 This application has been developed as a part of the project assignment for the subject [Intelligent Systems](http://is.fon.rs) at the [Faculty of Organization Sciences](http://fon.rs/), University of Belgrade, Serbia.
+
+# 6. References
+
+[1] Hoyer, P. O. (2004). Non-negative matrix factorization with sparseness constraints. The Journal of Machine Learning Research, 5, 1457-1469.
