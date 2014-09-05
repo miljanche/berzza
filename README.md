@@ -1,12 +1,57 @@
 berzza
 ======
 
-#Use example
+# 1. Requirements
+
+The idea behind this project is to provide functonality of factorizing stock data and finding patterns in them.
+
+
+Program workflow consists of several phases:
+
+1. User submits parameters (time period, number of features and companies)
+2. Program collects this data for multiple companies, for a provided period of time
+2. Data is parsed, prepared (forming a matrix of data)
+3. Program uses Non-negative Matrix Factorization (NMF), with user-provided parameters to extract features.
+4. Visualised result is shown to user.
+ 
+# 2. **NMF** - Non-negative matrix factorization
+
+NMF is method for factorizing start matrix (V) in (usually) two matrices, W and H. All three matrices have non-negative elements. Matrix multiplication of W and H should be equal to V. -> **V ≈ W x H**
+
+Algorithm is iterative and stops when WxH is equal to V or after some stopping criteria (ex. difference is small enough). Result of algorithm are matrices W and H.
+
+More information in [1].
+
+Solution: Data is collected from [YAHOO! Finance API](http://finance.yahoo.com). This api provides stock trade data for every company (that trades on NYSE - New York Stock Exchange), for a each trade day. Property used for calculations in this project is Volume of traded stocks for day.
+
+# 3. Techical realisation
+
+The application is written in [Clojure](http://clojure.org/). Clojure is functional programming language, dialect of Lisp, that executes on JVM. In application, several Clojure libraries were used:
+
+[Incanter](https://github.com/incanter/incanter/) is statistical and mathematical computing library. It is used here mostly for matematical purposes (matrix operations, etc).
+
+[Ring](https://github.com/ring-clojure/ring) is web applications library, used for abstracting details of HTTP.
+
+[Compojure](https://github.com/weavejester/compojure) is small routing library for Ring.
+
+[Hiccup](https://github.com/weavejester/hiccup) is library for HTML templating, via Clojure-like syntax.
+
+**Project structure**
+
+![Picture 2 - Structure](docs/images/structure.png)
+Picture 2 - Structure
+
+###Visualization:
+
+[D3.js](http://d3js.org/) is visualisation library written in javascript. It is very powerful with svg.
+
+
+# 4. Use example
 
 After the launching the project and clicking on *Find patterns!*, input form is shown:
 
-![Picture 1 - Input form](docs/images/input form.png)
-Picture 1 - Input form
+![Picture 2 - Input form](docs/images/input form.png)
+Picture 2 - Input form
 
 Here, we have to choose *Start date*, *End date*, *Interval* and *Number of features*. Then, we select companies whose trading stocks we want to explore. Interval can be:
 
@@ -30,14 +75,21 @@ In this example, we chose following parameters:
 
 #####Now, we shall interpret some of features we got!
 
-![Picture 2 - Input form - example](docs/images/example params.png)
-Picture 2 - Input form - example
+![Picture 3 - Input form - example](docs/images/example params.png)
+Picture 3 - Input form - example
 
    
 ##Results:
 
-![Picture 3 - Feature 0-1](docs/images/result feature 0-1.png)
-Picture 3 - Feature 0-1
+####In general, result looks like, and is interpreted like this:
+
+![Picture 4 - Explanation - example](docs/images/explanation.png)
+Picture 4 - Explanation - example
+
+###Results of our example are:
+
+![Picture 4 - Feature 0-1](docs/images/result feature 0-1.png)
+Picture 4 - Feature 0-1
 
 ####Feature 0:
 
@@ -58,13 +110,20 @@ On 10. May 2012. JPMorgan disclosed significant loss of $2 billion since start o
 
 After the crisis, JP Morgan Chase emerged as greatest USA bank. Seems that this report shook all financial sector, because, as we can see, this feature is significant for Bank of America, JP Morgan Chase, Wells and Fargo and Citigroup.
 
-![Picture 4 - Feature 4-5](docs/images/result feature 4-5.png)
-Picture 4 - Feature 4-5
+![Picture 5 - Feature 4-5](docs/images/result feature 4-5.png)
+Picture 5 - Feature 4-5
 
-![Picture 3 - Feature 6](docs/images/result feature 6.png)
-Picture 3 - Feature 6
+![Picture 6 - Feature 6](docs/images/result feature 6.png)
+Picture 6 - Feature 6
 
 ####Feature 6
 
 Ford motors posted on 28. January 2011. its  greatest annual income since 1999.
 General Motors launched largest U.S. Initial public offering of 2010 on NYSE (and one of the largest in history).
+
+# 5. Acknowledgements
+This application has been developed as a part of the project assignment for the subject [Intelligent Systems](http://is.fon.rs) at the [Faculty of Organization Sciences](http://fon.rs/), University of Belgrade, Serbia.
+
+# 6. References
+
+[1] Hoyer, P. O. (2004). Non-negative matrix factorization with sparseness constraints. The Journal of Machine Learning Research, 5, 1457-1469.
