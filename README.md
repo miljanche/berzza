@@ -81,6 +81,13 @@ Picture 3 - Input form - example
    
 ##Results:
 
+####In general, result looks like, and is interpreted like this:
+
+![Picture 4 - Explanation - example](docs/images/explanation.png)
+Picture 4 - Explanation - example
+
+###Results of our example are:
+
 ![Picture 4 - Feature 0-1](docs/images/result feature 0-1.png)
 Picture 4 - Feature 0-1
 
